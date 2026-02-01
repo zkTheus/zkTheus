@@ -1,0 +1,59 @@
+def mostrar_menu():
+    print("\n=== Sistema de Cadastro ===")
+    print("1 - Cadastrar nome")
+    print("2 - Listar nomes")
+    print("3 - Remover nome")
+    print("0 - Sair")
+
+
+def cadastrar(nomes):
+    nome = input("Digite o nome: ").strip()
+    if nome:
+        nomes.append(nome)
+        print("Nome cadastrado com sucesso!")
+    else:
+        print("Nome inválido.")
+
+
+def listar(nomes):
+    if not nomes:
+        print("Nenhum nome cadastrado.")
+    else:
+        print("\nNomes cadastrados:")
+        for i, nome in enumerate(nomes, start=1):
+            print(f"{i}. {nome}")
+
+
+def remover(nomes):
+    listar(nomes)
+    if nomes:
+        try:
+            indice = int(input("Digite o número do nome para remover: ")) - 1
+            nome_removido = nomes.pop(indice)
+            print(f"{nome_removido} removido com sucesso!")
+        except (ValueError, IndexError):
+            print("Opção inválida.")
+
+
+def main():
+    nomes = []
+
+    while True:
+        mostrar_menu()
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            cadastrar(nomes)
+        elif opcao == "2":
+            listar(nomes)
+        elif opcao == "3":
+            remover(nomes)
+        elif opcao == "0":
+            print("Encerrando o sistema...")
+            break
+        else:
+            print("Opção inválida.")
+
+
+if __name__ == "__main__":
+    main()
