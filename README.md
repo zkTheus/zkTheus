@@ -16,5 +16,5 @@
 - 🔹 Site responsivo com HTML e CSS
 
 ## 📫 Contato
-- LinkedIn: https://www.linkedin.com/in/seu-link
-- Email: seuemail@gmail.com
+- LinkedIn: https://www.linkedin.com/in/matheus-santana-dos-santos-34787a277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+- Email: santana200625@gmail.com
